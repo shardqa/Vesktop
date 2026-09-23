@@ -28,6 +28,9 @@ process.env.VENCORD_USER_DATA_DIR = DATA_DIR;
 
 const isLinux = process.platform === "linux";
 
+// Build próprio (vesktop-mine): identidade do launcher no Wayland/X11
+if (isLinux) app.setDesktopName("vesktop-mine.desktop");
+
 export let enableHardwareAcceleration = true;
 
 function init() {
